@@ -2,9 +2,10 @@ import { NativeModules } from 'react-native';
 
 const { ReactNativeDownloadManager } = NativeModules;
 
-var getRequestConfig = (config, url) => Object.assign({}, {
+const getRequestConfig = (config, url) => Object.assign({}, {
   downloadTitle: 'File Download',
   downloadDescription: url,
+  saveAsName: 'Downloaded File - ' + new Date(),
   allowedInRoaming: true,
   allowedInMetered: true,
   showInDownloads: true,
