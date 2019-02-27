@@ -9,8 +9,8 @@ const getRequestConfig = (config, url) => Object.assign({}, {
   allowedInRoaming: true,
   allowedInMetered: true,
   showInDownloads: true,
-  external: false,
-  path: "Download/"
+  external: true,
+  path: "Agvisor/"
 }, config);
 
 const download = (url = '', headers = {}, config = {}) => {
