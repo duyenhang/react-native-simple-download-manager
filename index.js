@@ -5,12 +5,11 @@ const { ReactNativeDownloadManager } = NativeModules;
 var getRequestConfig = (config, url) => Object.assign({}, {
   downloadTitle: 'File Download',
   downloadDescription: url,
-  saveAsName: 'Downloaded File - ' + new Date(),
   allowedInRoaming: true,
   allowedInMetered: true,
   showInDownloads: true,
-  external: false,
-  path: "Download/"
+  external: true,
+  path: "Download/Agvisor/"
 }, config);
 
 const download = (url = '', headers = {}, config = {}) => {
