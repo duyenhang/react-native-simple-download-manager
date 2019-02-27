@@ -1,8 +1,8 @@
-import {NativeModules} from 'react-native';
+import { NativeModules } from 'react-native';
 
-const {ReactNativeDownloadManager} = NativeModules;
+const { ReactNativeDownloadManager } = NativeModules;
 
-const getRequestConfig = (config, url) => Object.assign({}, {
+var getRequestConfig = (config, url) => Object.assign({}, {
   downloadTitle: 'File Download',
   downloadDescription: url,
   saveAsName: 'Downloaded File - ' + new Date(),
