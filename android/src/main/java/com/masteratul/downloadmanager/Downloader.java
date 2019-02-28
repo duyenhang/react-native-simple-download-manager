@@ -49,7 +49,7 @@ public class Downloader {
         
 
         if(external){
-            request.setDestinationInExternalPublicDir(external_path, saveAsName);
+            request.setDestinationInExternalPublicDir(external_path, downloadUri.getLastPathSegment());
 
         }else{
             request.setDestinationInExternalFilesDir(context, Environment.DIRECTORY_DOWNLOADS, saveAsName);
